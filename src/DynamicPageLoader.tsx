@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 // Assuming you have a NotFound component you want to use if a page is not found
-import NotFound from './pages/NotFound'; // Adjust path as needed
+import NotFound from '@/pages/NotFound'; // Adjust path as needed
 import LoadingFallback from './components/LoadingFallback';
 
 // // A simple loading fallback component
@@ -61,7 +61,7 @@ const DynamicPageLoader = () => {
     }
 
     // 执行动态导入
-    import(/* @vite-ignore */componentPath)
+    import(componentPath)
       .then(module => {
          // 检查导入的模块是否有效并包含默认导出的 React 组件函数
          if (module && typeof module.default === 'function') {
