@@ -2,7 +2,7 @@ import React from 'react';
 import BentoCard from '@/components/BentoCard'; // Assuming BentoCard component path
 import {
   Users, MessageSquareHeart, Lock, Unlock, Layers, MessageCircleQuestion,
-  ShieldCheck, Eye, AlertTriangle, Smile, Workflow, MessageSquareText // Re-using MessageSquareText for the main title card icon style
+  ShieldCheck, AlertTriangle, Smile, Workflow // Re-using MessageSquareText for the main title card icon style
 } from 'lucide-react'; // Assuming lucide-react is installed
 import { cn } from '@/lib/utils'; // Assuming cn utility path
 

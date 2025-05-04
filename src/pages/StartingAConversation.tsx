@@ -1,7 +1,7 @@
 import React from 'react';
 import BentoCard from '@/components/BentoCard'; // Assuming BentoCard component path
 import {
-  Users, Smile, MessageSquarePlus, Search, Lightbulb, MessageCircleQuestion,
+  Users, Search, Lightbulb,
   MessageSquareText, Handshake, Eye
 } from 'lucide-react'; // Assuming lucide-react is installed
 import { cn } from '@/lib/utils'; // Assuming cn utility path

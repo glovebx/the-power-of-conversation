@@ -2,7 +2,7 @@ import React from 'react';
 import BentoCard from '@/components/BentoCard'; // Assuming BentoCard component path
 import {
   Shield, ZapOff, Brain, AlertTriangle, Frown, Target, CheckCheck,
-  MessageSquareMore, Users // Re-using Users for a general communication/self icon
+  Users // Re-using Users for a general communication/self icon
 } from 'lucide-react'; // Assuming lucide-react is installed
 import { cn } from '@/lib/utils'; // Assuming cn utility path
 

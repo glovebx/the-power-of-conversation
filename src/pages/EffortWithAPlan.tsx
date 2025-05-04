@@ -1,8 +1,8 @@
 import React from 'react';
 import BentoCard from '@/components/BentoCard'; // Assuming BentoCard component path
 import {
-  Target, Goal, AlertTriangle, CheckCircle, ListChecks, Layers, Brain, Award, Smile, Frown, Workflow,
-  MessageSquareText // Re-using MessageSquareText for a general communication icon
+  Target, Goal, AlertTriangle, CheckCircle, ListChecks, Layers, Brain, Award, Smile, Frown, Workflow
+   // Re-using MessageSquareText for a general communication icon
 } from 'lucide-react'; // Assuming lucide-react is installed
 import { cn } from '@/lib/utils'; // Assuming cn utility path
 

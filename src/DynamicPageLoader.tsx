@@ -1,4 +1,4 @@
-import { useState, useEffect, Suspense, lazy } from 'react';
+import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 // Assuming you have a NotFound component you want to use if a page is not found
 import NotFound from './pages/NotFound'; // Adjust path as needed

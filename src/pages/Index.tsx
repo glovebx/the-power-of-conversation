@@ -1,8 +1,8 @@
 import React from 'react';
 import BentoCard from '@/components/BentoCard'; // Assuming BentoCard component path
 import {
-  BookOpen, Users, Settings, GraduationCap, Globe, Dumbbell, ListChecks,
-  MessageSquareText // Re-using MessageSquareText for a general communication icon style
+  BookOpen, Users, Settings, GraduationCap, Dumbbell, ListChecks
+   // Re-using MessageSquareText for a general communication icon style
 } from 'lucide-react'; // Assuming lucide-react is installed
 import { cn } from '@/lib/utils'; // Assuming cn utility path
 
