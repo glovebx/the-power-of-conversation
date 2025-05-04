@@ -1,58 +1,72 @@
 [
   {
-    "title": "The Art of Questioning",
-    "route": "/"
+    "title": "The Power of Conversation",
+    "route": "/",
+    "name": "Index"
   },
   {
     "title": "Art Of Questioning",
-    "route": "/art-of-questioning"
+    "route": "/art-of-questioning",
+    "name": "ArtOfQuestioning"
   },
   {
     "title": "Expressing Honest Praise",
-    "route": "/expressing-honest-praise"
+    "route": "/expressing-honest-praise",
+    "name": "ExpressingHonestPraise"
   },
   {
     "title": "Active Listening",
-    "route": "/active-listening"
+    "route": "/active-listening",
+    "name": "ActiveListening"
   },
   {
     "title": "Utilizing Free Information",
-    "route": "/utilizing-free-information"
+    "route": "/utilizing-free-information",
+    "name": "UtilizingFreeInformation"
   },
   {
     "title": "Letting Others Know You",
-    "route": "/letting-others-know-you"
+    "route": "/letting-others-know-you",
+    "name": "LettingOthersKnowYou"
   },
   {
     "title": "Starting A Conversation",
-    "route": "/starting-a-conversation"
+    "route": "/starting-a-conversation",
+    "name": "StartingAConversation"
   },
   {
     "title": "Issuing Invitations",
-    "route": "/issuing-invitations"
+    "route": "/issuing-invitations",
+    "name": "IssuingInvitations"
   },
   {
     "title": "Accepting Criticism",
-    "route": "/accepting-criticism"
+    "route": "/accepting-criticism",
+    "name": "AcceptingCriticism"
   },
   {
     "title": "Refusing Manipulation",
-    "route": "/refusing-manipulation"
+    "route": "/refusing-manipulation",
+    "name": "RefusingManipulation"
   },
   {
     "title": "Requesting Change",
-    "route": "/requesting-change"
+    "route": "/requesting-change",
+    "name": "RequestingChange"
   },
   {
     "title": "Expressing Through Actions",
-    "route": "/expressing-through-actions"
+    "route": "/expressing-through-actions",
+    "name": "ExpressingThroughActions"
   },
   {
     "title": "Reducing Social Anxiety",
-    "route": "/reducing-social-anxiety"
+    "route": "/reducing-social-anxiety",
+    "name": "ReducingSocialAnxiety"
   },
   {
     "title": "Effort With A Plan",
-    "route": "/effort-with-a-plan"
+    "route": "/effort-with-a-plan",
+    "name": "EffortWithAPlan"
   }
 ]

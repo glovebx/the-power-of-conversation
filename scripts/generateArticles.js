@@ -100,6 +100,9 @@ async function getSortedPageData(directoryPath) {
             route: route,
             birthtime: stats.birthtime // File creation time
           });
+
+          // console.log(`import ${baseName} from "./pages/${baseName}";`)
+          console.log(`<Route path="${route}" element={<${baseName} />} />`)
         } catch (statErr) {
           console.error(`Error getting stats for file ${fullPath}:`, statErr);
           // If getting file stats fails, skip this file
@@ -112,12 +115,13 @@ async function getSortedPageData(directoryPath) {
 
     // Extract the desired data format (title and route)
     const sortedPageList = [
-        {title: 'The Power of Conversation', route: '/'}, 
+        {title: 'The Power of Conversation', route: '/', name: 'Index'}, 
         ...fileData.map(item => ({
           title: item.title,
-          route: item.route
+          route: item.route,
+          name: item.baseName
         }))
-      ];
+      ];  
 
     return sortedPageList;
 
