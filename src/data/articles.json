@@ -1,0 +1,58 @@
+[
+  {
+    "title": "The Art of Questioning",
+    "route": "/"
+  },
+  {
+    "title": "Art Of Questioning",
+    "route": "/art-of-questioning"
+  },
+  {
+    "title": "Expressing Honest Praise",
+    "route": "/expressing-honest-praise"
+  },
+  {
+    "title": "Active Listening",
+    "route": "/active-listening"
+  },
+  {
+    "title": "Utilizing Free Information",
+    "route": "/utilizing-free-information"
+  },
+  {
+    "title": "Letting Others Know You",
+    "route": "/letting-others-know-you"
+  },
+  {
+    "title": "Starting A Conversation",
+    "route": "/starting-a-conversation"
+  },
+  {
+    "title": "Issuing Invitations",
+    "route": "/issuing-invitations"
+  },
+  {
+    "title": "Accepting Criticism",
+    "route": "/accepting-criticism"
+  },
+  {
+    "title": "Refusing Manipulation",
+    "route": "/refusing-manipulation"
+  },
+  {
+    "title": "Requesting Change",
+    "route": "/requesting-change"
+  },
+  {
+    "title": "Expressing Through Actions",
+    "route": "/expressing-through-actions"
+  },
+  {
+    "title": "Reducing Social Anxiety",
+    "route": "/reducing-social-anxiety"
+  },
+  {
+    "title": "Effort With A Plan",
+    "route": "/effort-with-a-plan"
+  }
+]
