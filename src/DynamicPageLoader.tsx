@@ -91,8 +91,6 @@ const DynamicPageLoader: React.FC<DynamicPageLoaderProps> = ({ lazyModules }) =>
         return; // 停止执行导入
     }
 
-    console.log(componentPath);
-
     // 执行动态导入
     lazyModules[componentPath]()
       .then((module) => {
