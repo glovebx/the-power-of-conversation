@@ -22,7 +22,7 @@ export default defineConfig(({ mode }) => ({
   ].filter(Boolean),
   resolve: {
     alias: {
-      "@": resolve(_dirname, "./src"),
+      "@": resolve(_dirname, "./src")
     },
-  },
+  }
 }));

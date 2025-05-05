@@ -1,8 +1,38 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 // Assuming you have a NotFound component you want to use if a page is not found
 import NotFound from '@/pages/NotFound'; // Adjust path as needed
 import LoadingFallback from './components/LoadingFallback';
+
+// const lazyComponentModules = import.meta.glob('./pages/*.tsx')
+// for (const path in lazyComponentModules) {
+//   lazyComponentModules[path]().then((mod) => {
+//     console.log(path, mod)
+//   })
+// }
+
+// --- Define types for the imported module and the map ---
+// These types are needed by both App.tsx and DynamicPageLoader.tsx
+// In a larger project, you might put these in a shared types file.
+
+// Define the expected type for the object returned by a successful dynamic import
+// It must have a 'default' property which is a React component
+interface ImportedPageModule {
+  default: React.ComponentType<any>; // Use React.ComponentType for flexibility
+  // Add other expected named exports here if your modules have them, e.g., otherExport: any;
+}
+
+// Define the type for the map where keys are paths (strings) and values are functions
+// that return a Promise resolving to the ImportedPageModule type
+export type LazyModuleMap = {
+  [path: string]: () => Promise<ImportedPageModule>;
+};
+
+// Define the props for the DynamicPageLoader component
+interface DynamicPageLoaderProps {
+  // Use the imported LazyModuleMap type
+  lazyModules: LazyModuleMap; // Accept the lazy module map as a prop
+}
 
 // // A simple loading fallback component
 // const LoadingFallback = () => <div className="w-full max-w-7xl px-4 md:px-6 mx-auto">Loading Page...</div>;
@@ -22,11 +52,12 @@ function slugToComponentName(slug: string) {
 type PageModule = null | { default: React.ComponentType<any> }; // Use React.ComponentType for flexibility
 
 // This component dynamically loads and renders a page component based on the URL slug
-const DynamicPageLoader = () => {
+const DynamicPageLoader: React.FC<DynamicPageLoaderProps> = ({ lazyModules }) => {
 
   const { pageSlug } = useParams(); // Get the dynamic part from the URL (e.g., 'art-of-questioning')
 
   const [pageModule, setPageModule] = useState<PageModule>(null); // 初始化为 null
+  // const [PageComponent, setPageComponent] = useState<React.LazyExoticComponent<any>>();
   const [isLoading, setIsLoading] = useState(true); // 控制加载状态
   const [error, setError] = useState<Error | null>(null); // 存储加载或处理错误  
 
@@ -60,9 +91,11 @@ const DynamicPageLoader = () => {
         return; // 停止执行导入
     }
 
+    console.log(componentPath);
+
     // 执行动态导入
-    import(componentPath)
-      .then(module => {
+    lazyModules[componentPath]()
+      .then((module) => {
          // 检查导入的模块是否有效并包含默认导出的 React 组件函数
          if (module && typeof module.default === 'function') {
             setPageModule(module as PageModule); // 加载成功，存储整个模块对象
@@ -81,7 +114,7 @@ const DynamicPageLoader = () => {
         setError(err); // 设置错误状态
         setIsLoading(false); // 加载完成 (失败)
       });
-
+    
       // useEffect 的清理函数 (如果导入过程有需要清理的资源，通常动态导入不需要)
       // return () => { ... cleanup ... };
 
